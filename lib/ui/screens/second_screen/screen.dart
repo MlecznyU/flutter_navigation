@@ -1,17 +1,17 @@
 import 'package:flutter/material.dart';
+import 'package:navigation/App.dart';
+import 'package:navigation/ui/screens/home/navigation.dart';
 import 'package:navigation/ui/shared_components/shared_components.dart';
 
-import '../../App.dart';
-
-class ThirdScreen extends StatelessWidget {
+class SecondScreen extends StatelessWidget {
   final String message;
 
-  ThirdScreen(this.message);
+  SecondScreen(this.message);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text('Third screen')),
+      appBar: AppBar(title: Text('Second screen')),
       body: SafeArea(
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
@@ -25,12 +25,19 @@ class ThirdScreen extends StatelessWidget {
             ),
             SizedBox(height: 24),
             Text(
-              message == '' ? 'no message' : message,
+              message,
               textAlign: TextAlign.center,
               style: TextStyle(fontSize: 16),
             ),
             SizedBox(height: 24),
-            buildButton('back', () => Application.navigator.currentState.pop())
+            buildButton(
+              'home screen',
+              () {
+                Application.navigator.currentState.push(
+                  HomeRoute.get('Navigated from second screen'),
+                );
+              },
+            )
           ],
         ),
       ),

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:navigation/ui/home/screen.dart';
+
+import 'ui/screens/home/screen.dart';
 
 class Application extends StatelessWidget {
   static final navigator = GlobalKey<NavigatorState>();

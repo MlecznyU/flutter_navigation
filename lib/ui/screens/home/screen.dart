@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:navigation/App.dart';
-import 'package:navigation/ui/second_screen/navigation.dart';
+import 'package:navigation/ui/screens/second_screen/navigation.dart';
+import 'package:navigation/ui/screens/third_screen/navigation.dart';
 import 'package:navigation/ui/shared_components/shared_components.dart';
-import 'package:navigation/ui/third_screen/navigation.dart';
 
 class Home extends StatelessWidget {
   final String message;

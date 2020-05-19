@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:navigation/ui/home/screen.dart';
+
+import 'screen.dart';
 
 class HomeRoute {
   static Route get(final String message) {
